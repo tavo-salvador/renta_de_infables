@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MAXI EVENTOS | Renta de inflables, consolas y equipo para eventos en CDMX y EDO</title>
+    <meta
+      name="description"
+      content="Renta de inflables, consolas de videojuegos, audio, iluminación y más para fiestas y eventos en CDMX y EDO MEX. Montaje seguro y puntual. ¡Cotiza por WhatsApp!"
+    />
+    <meta property="og:title" content="MAXI EVENTOS – Renta para eventos" />
+    <meta property="og:description" content="Inflables, consolas, audio e iluminación para fiestas, bodas, 15 años y más. ¡Reserva hoy en CDMX y EDO MEX!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/logo/isotipo.png" />
+    <meta name="theme-color" content="#06b6d4" />
+    <!-- Favicon moderno en SVG -->
+    <link rel="icon" href="assets/logo/isotipo.png" type="image/svg+xml" />
+    <!-- Color de la barra del navegador móvil -->
+    <meta name="theme-color" content="#1EA0C2" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- JSON-LD: LocalBusiness -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "MAXI EVENTOS",
+        "image": "assets/logo/maxi_eventos_logo.svg",
+        "url": "maxieventos.com.mx",
+        "telephone": "+525571371242",
+        "email": "maxieventos@maxiclub.com.mx",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "CDMX y EDO",
+          "addressCountry": "MX"
+        },
+        "areaServed": "CDMX y EDO",
+        "openingHours": "Lunes a domingo 9am -6 pm"
+      }
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+
+  <body class="bg-slate-50 text-slate-800">
+    <!-- Banner cookies -->
+    <div id="cookies" class="fixed bottom-0 inset-x-0 z-40 bg-white border-t border-slate-200 p-4 shadow-lg flex items-start gap-4">
+      <div class="flex-1 text-sm">Usamos cookies para mejorar tu experiencia. Al continuar aceptas nuestro <a href="#" class="text-cyan-500 underline">aviso de privacidad</a>.</div>
+      <button class="px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-700" onclick="document.getElementById('cookies').remove()">Aceptar</button>
+    </div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="#inicio" class="flex items-center gap-3">
+          <img src="assets/logo/maxi_eventos_logo.svg" alt="Logo MAXI EVENTOS" class="w-80 h-10 rounded-xl object-cover" />
+          <div>
+            <p class="font-extrabold text-lg leading-none">MAXI EVENTOS</p>
+            <p class="text-xs text-slate-500">Vive tu evento al máximo.</p>
+          </div>
+        </a>
+        <nav class="hidden md:flex gap-6 text-sm">
+          <a class="nav-link" href="#catalogo">Catálogo</a>
+          <a class="nav-link" href="#paquetes">Paquetes</a>
+          <a class="nav-link" href="#eventos">Eventos</a>
+          <a class="nav-link" href="#testimonios">Reseñas</a>
+          <a class="nav-link" href="#cobertura">Cobertura</a>
+          <a class="nav-link" href="#faq">FAQ</a>
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a
+            href="https://wa.me/+525571371242?text=Hola,%20MAXIEVENTO%20quiero%20cotizar%20para%20CDMX%y%EDO"
+            target="_blank"
+            rel="noopener"
+            class="hidden md:inline-flex px-4 py-2 rounded-lg bg-cyan-500 text-white font-medium hover:bg-cyan-700"
+            >Cotizar por WhatsApp</a
+          >
+          <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-slate-200" aria-label="Abrir menú">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200">
+        <div class="px-4 py-3 grid gap-3 text-sm">
+          <a class="nav-link block" href="#catalogo">Catálogo</a>
+          <a class="nav-link block" href="#paquetes">Paquetes</a>
+          <a class="nav-link block" href="#eventos">Eventos</a>
+          <a class="nav-link block" href="#testimonios">Reseñas</a>
+          <a class="nav-link block" href="#cobertura">Cobertura</a>
+          <a class="nav-link block" href="#faq">FAQ</a>
+          <a class="nav-link block" href="#contacto">Contacto</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="inicio" class="relative">
+      <div class="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-transparent pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-4 py-16 md:py-24 grid lg:grid-cols-2 gap-10 items-center">
+        <div class="fade-in">
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Renta de inflables, consolas y equipo para eventos en <span class="text-cyan-500">CDMX y ZONA METROPOLITANA</span></h1>
+          <p class="mt-4 text-lg text-slate-600">Montaje seguro y puntual para fiestas, cumpleaños, bodas, 15 años y más. ¡Reserva hoy y asegura tu fecha!</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#catalogo" class="px-5 py-3 rounded-xl bg-cyan-500 text-white font-semibold hover:bg-cyan-700">Ver catálogo</a>
+            <a
+              href="https://wa.me/+525571371242?text=Hola,%20quiero%20cotizar%20mi%20evento%20en%20CDMX%y%EDO"
+              target="_blank"
+              rel="noopener"
+              class="px-5 py-3 rounded-xl border border-cyan-500 text-cyan-500 font-semibold hover:bg-cyan-500/10"
+              >Cotizar por WhatsApp</a
+            >
+          </div>
+          <div class="mt-6 flex gap-4 text-sm text-slate-600">
+            <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 bg-emerald-500 rounded-full"></span> Entrega puntual</div>
+            <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 bg-emerald-500 rounded-full"></span> Higienizado</div>
+            <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 bg-emerald-500 rounded-full"></span> Instalación incluida</div>
+          </div>
+        </div>
+        <div class="relative fade-in">
+          <img class="rounded-3xl shadow-2xl w-full h-[360px] object-cover" src="assets/img/inflable2.png" alt="Fiesta con inflables y luces" />
+          <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 w-64">
+            <p class="text-sm text-slate-500">Eventos realizados</p>
+            <p class="text-3xl font-extrabold">+<span id="eventsCount">450</span></p>
+            <p class="text-xs text-slate-500">Clientes felices en CDMX y EDO MEX</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo -->
+    <section id="catalogo" class="py-16 md:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="mb-8 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold">Catálogo</h2>
+            <p class="text-slate-600">Elige entre inflables, consolas de videojuegos y extras.</p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <input id="search" class="px-4 py-2 rounded-xl border border-slate-300 w-64" placeholder="Buscar por nombre…" />
+            <select id="category" class="px-4 py-2 rounded-xl border border-slate-300">
+              <option value="all">Todas las categorías</option>
+              <option value="inflables">Inflables</option>
+              <option value="consolas">Consolas</option>
+              <option value="audio">Puffs</option>
+            </select>
+            <select id="price" class="px-4 py-2 rounded-xl border border-slate-300">
+              <option value="all">Todos los precios</option>
+              <option value="1">Hasta $1,000</option>
+              <option value="2">$1,001 – $2,000</option>
+              <option value="3">$2,001 – $3,500</option>
+              <option value="4">$3,501 o más</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Producto: Inflable 1 -->
+          <article class="card" data-name="Alberca" data-category="inflables" data-price="3">
+            <div class="bg-slate-100 rounded-2xl overflow-hidden group cursor-pointer" onclick="openLightbox('assets/img/catalogo/alberca_pelotas2.jpeg')">
+              <img src="assets/img/catalogo/alberca_pelotas.jpeg" alt="Alberca" class="h-48 w-full object-cover group-hover:scale-[1.02] transition" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Alberca de pelotas</h3>
+              <p class="text-sm text-slate-600">Medidas: Alberca 150 x 40 x 10 cm, Escalera: 40 x 40 x 60 cm· Recomendado para ñinos de 3 Años +· Higienizado tras cada uso.</p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="font-extrabold text-cyan-500">Desde $2,500</span>
+                <a
+                  class="px-3 py-2 text-sm rounded-lg bg-cyan-500 text-white hover:bg-cyan-700"
+                  href="https://wa.me/+525571371242?text=Hola,%20me%20interesa%20Alberca%20de%20Pelotas%20para%20mi%20evento"
+                  >Cotizar</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto: Inflable 2 -->
+          <article class="card" data-name="inflable mario bros" data-category="inflables" data-price="4">
+            <div class="bg-slate-100 rounded-2xl overflow-hidden group cursor-pointer" onclick="openLightbox('assets/img/catalogo/inflable_mario_bros2.jpeg')">
+              <img src="assets/img/catalogo/inflable_mario_bros.jpeg" alt="inflable mario bros" class="h-48 w-full object-cover group-hover:scale-[1.02] transition" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Infable Mario Bros</h3>
+              <p class="text-sm text-slate-600">Medidas 6 × 4 x 3 mts · Ideal para varios ñinos · Requiere conexion de 127v y Area grande donde colocar</p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="font-extrabold text-cyan-500">Desde $3,800</span>
+                <a
+                  class="px-3 py-2 text-sm rounded-lg bg-cyan-500 text-white hover:bg-cyan-700"
+                  href="https://wa.me/+525571371242?text=Hola,%20me%20interesa%20infale%20Mario%20Bros%20para%20mi%20evento"
+                  >Cotizar</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto: Consolas -->
+          <article class="card" data-name="Consola xbox" data-category="consolas" data-price="2">
+            <div class="bg-slate-100 rounded-2xl overflow-hidden group cursor-pointer" onclick="openLightbox('assets/img/catalogo/consola.jpeg')">
+              <img src="assets/img/renta_de_consolas.jpg" alt="Consola xbox" class="h-48 w-full object-cover group-hover:scale-[1.02] transition" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Renta de consola de Videojuegos Xbox</h3>
+              <p class="text-sm text-slate-600">Renta por día, Incluye 2 controles. (Variedad de Juegos).</p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="font-extrabold text-cyan-500">Desde $2,199</span>
+                <a class="px-3 py-2 text-sm rounded-lg bg-cyan-500 text-white hover:bg-cyan-700" href="https://wa.me/+525571371242?text=Hola,%20quiero%20cotizar%20Consola">Cotizar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto: Audio -->
+          <article class="card" data-name='Bocina 15" Pro' data-category="audio" data-price="2">
+            <div class="bg-slate-100 rounded-2xl overflow-hidden group cursor-pointer" onclick="openLightbox('assets/img/catalogo/inflable_paw_patroll.jpeg')">
+              <img src="assets/img/catalogo/inflable_paw_patroll.jpeg" alt="Bocina 15 pulgadas" class="h-48 w-full object-cover group-hover:scale-[1.02] transition" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Infable Paw Patroll</h3>
+              <p class="text-sm text-slate-600">Medidas: 4 x 4 x 2.2 Mts. Requiere conexion de 127v y Area libre donde colocar</p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="font-extrabold text-cyan-500">Desde $1,200</span>
+                <a class="px-3 py-2 text-sm rounded-lg bg-cyan-500 text-white hover:bg-cyan-700" href="https://wa.me/+525571371242?text=Hola,%20quiero%20cotizar%20Infable%20PaW%Patroll">Cotizar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto: Iluminación -->
+          <article class="card" data-name="Kit de Iluminación LED" data-category="audio" data-price="1">
+            <div class="bg-slate-100 rounded-2xl overflow-hidden group cursor-pointer" onclick="openLightbox('assets/img/catalogo/puffs.jpeg')">
+              <img src="assets/img/catalogo/puffs.jpeg" alt="Luces LED" class="h-48 w-full object-cover group-hover:scale-[1.02] transition" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Renta de Sillones Puffs</h3>
+              <p class="text-sm text-slate-600">Dale un toque moderno, cómodo y elegante a tu evento con nuestros puffs de alta calidad.</p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="font-extrabold text-cyan-500">Desde $500</span>
+                <a class="px-3 py-2 text-sm rounded-lg bg-cyan-500 text-white hover:bg-cyan-700" href="https://wa.me/+525571371242?text=Hola,%20quiero%20cotizar%20Renta%20de%20Puffs">Cotizar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto: Extra -->
+          <!-- <article class="card" data-name="Paquete Mobiliario 20p" data-category="extra" data-price="1">
+            <div class="bg-slate-100 rounded-2xl overflow-hidden group cursor-pointer" onclick="openLightbox('assets/img/renta_de_inmobiliario.png')">
+              <img src="assets/img/renta_de_inmobiliario.png" alt="Mobiliario" class="h-48 w-full object-cover group-hover:scale-[1.02] transition" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Paquete Mobiliario 20p</h3>
+              <p class="text-sm text-slate-600">2 mesas rectangulares + 20 sillas plegables · Montaje incluido.</p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="font-extrabold text-cyan-500">Desde $950</span>
+                <a class="px-3 py-2 text-sm rounded-lg bg-cyan-500 text-white hover:bg-cyan-700" href="https://wa.me/+525571371242?text=Hola,%20quiero%20cotizar%20Mobiliario%2020p">Cotizar</a>
+              </div>
+            </div>
+          </article> -->
+        </div>
+        <p id="emptyState" class="hidden mt-6 text-center text-slate-500">No encontramos resultados con tus filtros. 🙈</p>
+      </div>
+    </section>
+
+    <!-- Paquetes -->
+    <section id="paquetes" class="py-16 md:py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-8">Paquetes y promociones</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Básico -->
+          <div class="rounded-3xl bg-white border border-slate-200 p-6 flex flex-col">
+            <h3 class="text-xl font-bold">Básico</h3>
+            <p class="mt-2 text-sm text-slate-600">Inflable mediano + 4 horas · Montaje incluido.</p>
+            <p class="mt-4 text-3xl font-extrabold text-cyan-500">$2,200</p>
+            <ul class="mt-4 text-sm space-y-2 list-disc list-inside">
+              <li>Entrega y recolección</li>
+              <li>Higienizado y seguro</li>
+              <li>Atención por WhatsApp</li>
+            </ul>
+            <a class="mt-6 px-4 py-3 text-center rounded-xl bg-cyan-500 text-white font-semibold hover:bg-cyan-700" href="https://wa.me/+525571371242?text=Hola,%20quiero%20el%20paquete%20B%C3%A1sico"
+              >Cotizar</a
+            >
+          </div>
+
+          <!-- Familiar (destacado) -->
+          <div class="rounded-3xl bg-white border-2 border-cyan-500 p-6 shadow-xl scale-[1.01] flex flex-col">
+            <div class="inline-block px-3 py-1 text-xs rounded-full bg-cyan-500/10 text-cyan-500 font-bold">Más elegido</div>
+            <h3 class="mt-2 text-xl font-bold">Familiar</h3>
+            <p class="mt-2 text-sm text-slate-600">Inflable mediano + Bocina 12” + 2 mesas + 10 sillas · 5 horas.</p>
+            <p class="mt-4 text-3xl font-extrabold text-cyan-500">$3,400</p>
+            <ul class="mt-4 text-sm space-y-2 list-disc list-inside">
+              <li>Instalación y prueba de audio</li>
+              <li>Asesoría para espacio y energía</li>
+              <li>Soporte durante el evento</li>
+            </ul>
+            <a class="mt-6 px-4 py-3 text-center rounded-xl bg-cyan-500 text-white font-semibold hover:bg-cyan-700" href="https://wa.me/+525571371242?text=Hola,%20quiero%20el%20paquete%20Familiar"
+              >Cotizar</a
+            >
+          </div>
+
+          <!-- Todo Incluido -->
+          <div class="rounded-3xl bg-white border border-slate-200 p-6 flex flex-col">
+            <h3 class="text-xl font-bold">Todo Incluido</h3>
+            <p class="mt-2 text-sm text-slate-600">Inflable grande + Consola Party + Audio/luces + Mobiliario · 6 horas.</p>
+            <p class="mt-4 text-3xl font-extrabold text-cyan-500">$6,900</p>
+            <ul class="mt-4 text-sm space-y-2 list-disc list-inside">
+              <li>Traslado en CDMX y EDO</li>
+              <li>Supervisor en sitio</li>
+              <li>Reagendación flexible</li>
+            </ul>
+            <a
+              class="mt-6 px-4 py-3 text-center rounded-xl bg-cyan-500 text-white font-semibold hover:bg-cyan-700"
+              href="https://wa.me/+525571371242?text=Hola,%20quiero%20el%20paquete%20Todo%20Incluido"
+              >Cotizar</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eventos que cubrimos -->
+    <section id="eventos" class="py-16 md:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-8">Eventos que cubrimos</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <img class="h-44 w-full object-cover" src="assets/img/cumpleaños.jpg" alt="Cumpleaños" />
+            <div class="p-4">
+              <h3 class="font-bold">Cumpleaños</h3>
+              <p class="text-sm text-slate-600">Inflables y consolas que encantan a chicos y grandes.</p>
+            </div>
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <img class="h-44 w-full object-cover" src="assets/img/boda.jpg" alt="Bodas" />
+            <div class="p-4">
+              <h3 class="font-bold">Bodas</h3>
+              <p class="text-sm text-slate-600">Audio e iluminación para un ambiente inolvidable.</p>
+            </div>
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <img class="h-44 w-full object-cover" src="assets/img/15_anos.jpg" alt="XV años" />
+            <div class="p-4">
+              <h3 class="font-bold">15 años</h3>
+              <p class="text-sm text-slate-600">Paquetes completos para tu gran noche.</p>
+            </div>
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <img class="h-44 w-full object-cover" src="assets/img/bautizo.jpg" alt="Bautizos" />
+            <div class="p-4">
+              <h3 class="font-bold">Bautizos</h3>
+              <p class="text-sm text-slate-600">Ambiente familiar con mobiliario y música.</p>
+            </div>
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <img class="h-44 w-full object-cover" src="assets/img/graduaciones.jpg" alt="Graduaciones" />
+            <div class="p-4">
+              <h3 class="font-bold">Graduaciones</h3>
+              <p class="text-sm text-slate-600">Audio potente y luces para festejar con todo.</p>
+            </div>
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <img class="h-44 w-full object-cover" src="assets/img/eventos_empresariales.jpg" alt="Empresariales" />
+            <div class="p-4">
+              <h3 class="font-bold">Empresariales</h3>
+              <p class="text-sm text-slate-600">Soluciones puntuales para activaciones y convivios.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="py-16 md:py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-end justify_between mb-8">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold">Reseñas de clientes</h2>
+            <p class="text-slate-600">Calificación promedio <span class="font-bold">4.9/5</span> (basado en reseñas)</p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <figure class="rounded-3xl bg-white border border-slate-200 p-6">
+            <blockquote class="text-slate-700">“Servicio impecable, los niños felices y el montaje rapidísimo.”</blockquote>
+            <figcaption class="mt-4 text-sm text-slate-500">— Ana G., mayo 2024</figcaption>
+          </figure>
+          <figure class="rounded-3xl bg-white border border-slate-200 p-6">
+            <blockquote class="text-slate-700">“La consola con proyector fue el hit de la fiesta, ¡super recomendados!”</blockquote>
+            <figcaption class="mt-4 text-sm text-slate-500">— Carlos M., junio 2025</figcaption>
+          </figure>
+          <figure class="rounded-3xl bg-white border border-slate-200 p-6">
+            <blockquote class="text-slate-700">“Puntuales y amables, equipo limpio y en excelente estado.”</blockquote>
+            <figcaption class="mt-4 text-sm text-slate-500">— Vania R., agosto 2025</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cobertura & ¿Cómo funciona? -->
+    <section id="cobertura" class="py-16 md:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold">Cobertura</h2>
+          <p class="mt-2 text-slate-600">Trabajamos en CDMX, Tlalnepantla, Naucalpan, Atizapan, Cuautitlán y alrededores. Traslado sin costo dentro de la zona, cargos extra por foraneos.</p>
+          <div class="mt-4 rounded-3xl overflow-hidden border border-slate-200">
+            <iframe title="Mapa de cobertura" src="https://www.google.com/maps?q=CDMX y EDO&output=embed" class="w-full h-72"></iframe>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold">¿Cómo funciona?</h3>
+          <ol class="mt-4 space-y-3 text-slate-700">
+            <li><span class="font-bold text-cyan-500">1. Elige</span> tus productos o paquete ideal.</li>
+            <li><span class="font-bold text-cyan-500">2. Agenda</span> por WhatsApp o formulario con fecha y horario.</li>
+            <li><span class="font-bold text-cyan-500">3. Disfruta</span> – instalamos, probamos y regresamos a la recolección.</li>
+          </ol>
+          <div class="mt-6 p-4 bg-cyan-500/10 rounded-xl text-sm text-slate-700">Sujeto a disponibilidad. En caso de lluvia, podemos reagendar sin costo según agenda.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 md:py-20 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Preguntas frecuentes</h2>
+        <div class="divide-y divide-slate-200 rounded-3xl border border-slate-200 bg-white">
+          <!-- Item -->
+          <details class="group p-6" open>
+            <summary class="flex cursor-pointer list-none items-center justify-between">
+              <span class="font-semibold">¿Cómo garantizan la seguridad e higiene?</span>
+              <span class="transition group-open:rotate-180">▾</span>
+            </summary>
+            <p class="mt-3 text-slate-600">Higienizamos equipo tras cada uso, instalamos con anclaje y verificamos energía segura 110V.</p>
+          </details>
+          <details class="group p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between">
+              <span class="font-semibold">¿Qué pasa si llueve?</span>
+              <span class="transition group-open:rotate-180">▾</span>
+            </summary>
+            <p class="mt-3 text-slate-600">Podemos reagendar sin costo según disponibilidad si nos avisas 24 h antes. Inflables acuáticos sujetos a clima.</p>
+          </details>
+          <details class="group p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between">
+              <span class="font-semibold">¿Qué métodos de pago aceptan?</span>
+              <span class="transition group-open:rotate-180">▾</span>
+            </summary>
+            <p class="mt-3 text-slate-600">Efectivo, transferencia y tarjeta (TPV). Anticipo para asegurar la fecha.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 md:py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Contacto y cotización</h2>
+        <p class="mt-2 text-slate-600">Completa el formulario y te responderemos a la brevedad, o escríbenos por WhatsApp.</p>
+        <form id="form" class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 rounded-3xl border border-slate-200 p-6 bg-slate-50" novalidate>
+          <div>
+            <label class="text-sm" for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" required class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300" placeholder="Tu nombre" />
+          </div>
+          <div>
+            <label class="text-sm" for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" required class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300" placeholder="10 dígitos" />
+          </div>
+          <div>
+            <label class="text-sm" for="fecha">Fecha del evento</label>
+            <input id="fecha" name="fecha" type="date" required class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300" />
+          </div>
+          <div>
+            <label class="text-sm" for="hora">Horario aproximado</label>
+            <input id="hora" name="hora" type="time" required class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300" />
+          </div>
+          <div class="md:col-span-2">
+            <label class="text-sm" for="direccion">Dirección / zona</label>
+            <input id="direccion" name="direccion" required class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300" placeholder="Colonia / municipio" />
+          </div>
+          <div>
+            <label class="text-sm" for="tipo">Tipo de evento</label>
+            <select id="tipo" name="tipo" class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300">
+              <option>Cumpleaños</option>
+              <option>15 años</option>
+              <option>Boda</option>
+              <option>Escolar</option>
+              <option>Empresarial</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-sm" for="interes">Productos de interés</label>
+            <select id="interes" name="interes" class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300">
+              <option>Inflables</option>
+              <option>Consolas</option>
+              <option>Audio/luces</option>
+              <option>Paquetes</option>
+              <option>Mobiliario</option>
+            </select>
+          </div>
+          <div class="md:col-span-2">
+            <label class="text-sm" for="mensaje">Comentarios</label>
+            <textarea id="mensaje" name="mensaje" rows="4" class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300" placeholder="Cuéntanos detalles (edades, espacio, presupuesto)…"></textarea>
+          </div>
+          <div class="md:col-span-2 flex items-center gap-2 text-sm">
+            <input id="terminos" type="checkbox" required class="rounded" />
+            <label for="terminos">Acepto los <a href="#" class="text-cyan-500 underline">términos</a> y el <a href="#" class="text-cyan-500 underline">aviso de privacidad</a>.</label>
+          </div>
+          <div class="md:col-span-2 flex flex-wrap gap-3 items-center">
+            <button type="submit" class="px-5 py-3 rounded-xl bg-cyan-500 text-white font-semibold hover:bg-cyan-700">Enviar solicitud</button>
+            <a
+              href="https://wa.me/+525571371242?text=Hola,%20quiero%20cotizar%20mi%20evento"
+              target="_blank"
+              rel="noopener"
+              class="px-5 py-3 rounded-xl border border-cyan-500 text-cyan-500 font-semibold hover:bg-cyan-500/10"
+              >Escribir por WhatsApp</a
+            >
+            <span id="formMsg" class="text-sm"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-200">
+      <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <img src="assets/logo/maxi_eventos_logo.svg" alt="Logo MAXI EVENTOS" class="w-80 h-10 rounded-xl object-cover" />
+          <!-- <h4 class="font-extrabold text-2xl">MAXI EVENTOS</h4> -->
+          <p class="mt-2 text-slate-400">Hacemos de cada evento una experiencia inolvidable.</p>
+          <p class="mt-4 text-sm">Atención: Lunes a domingo 9 am -6 pm</p>
+        </div>
+        <div>
+          <h5 class="font-bold mb-3">Contacto</h5>
+          <ul class="space-y-2 text-sm">
+            <li>Tel: <a class="underline" href="tel:5521246271">55 2124 6271</a></li>
+            <li>WhatsApp: <a class="underline" href="https://wa.me/+525571371242" target="_blank" rel="noopener">55 7137 1242</a></li>
+            <li>Correo: <a class="underline" href="mailto:maxieventos@maxiclub.com.mx">maxieventos@maxiclub.com.mx</a></li>
+            <li>Zona: CDMX y EDO MEX</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-3">Enlaces</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a class="hover:underline" href="#catalogo">Catálogo</a></li>
+            <li><a class="hover:underline" href="#paquetes">Paquetes</a></li>
+            <li><a class="hover:underline" href="#faq">FAQ</a></li>
+            <li><a class="hover:underline" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-800 py-4 text-xs text-center text-slate-400">© <span id="year"></span> MAXI EVENTOS · Todos los derechos reservados</div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Vista" />
+    </div>
+
+    <!-- Botones flotantes -->
+    <a class="float-btn totop-float" href="#inicio" aria-label="Volver arriba">
+      <svg
+        width="24px"
+        height="24px"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        aria-hidden="true"
+        role="img"
+        class="iconify iconify--emojione"
+        preserveAspectRatio="xMidYMid meet"
+      >
+        <circle cx="32" cy="32" r="30" fill="#4fd1d9"></circle>
+        <path fill="#ffffff" d="M48 30.3L32 15L16 30.3h10.6V49h10.3V30.3z"></path>
+      </svg>
+    </a>
+    <a
+      class="float-btn whatsapp-float"
+      href="https://wa.me/+525571371242?text=Hola,%20quiero%20cotizar%20para%20{{FECHA_EVENTO}}%20en%20CDMX y EDO.%20Mi%20nombre%20es%20__%20.%20Me%20interesa:%20__"
+      target="_blank"
+      rel="noopener"
+      aria-label="WhatsApp"
+      ><svg width="24px" height="24px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z"
+          fill="#BFC8D0"
+        />
+        <path
+          d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z"
+          fill="url(#paint0_linear_87_7264)"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z"
+          fill="white"
+        />
+        <path
+          d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z"
+          fill="white"
+        />
+        <defs>
+          <linearGradient id="paint0_linear_87_7264" x1="26.5" y1="7" x2="4" y2="28" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#5BD066" />
+            <stop offset="1" stop-color="#27B43E" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </a>
+    <a class="float-btn phone-float" href="tel:55 3574 9354" aria-label="Llamar">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" id="Phone--Streamline-Plump" height="24" width="24">
+        <desc>Phone Streamline Icon: https://streamlinehq.com</desc>
+        <g id="phone--android-phone-mobile-device-smartphone-iphone">
+          <path
+            id="Union"
+            fill="#000000"
+            d="M46.483 14.556C45.925 32.293 31.372 46.5 13.5 46.5c-6.833 0 -12 -5.335 -12 -12.069a4.5 4.5 0 0 1 2.829 -4.178l6.165 -2.466a5.5 5.5 0 0 1 5.932 1.217l3.076 3.077c0.136 0.136 0.289 0.152 0.382 0.124a18.545 18.545 0 0 0 12.32 -12.32c0.029 -0.094 0.013 -0.247 -0.123 -0.383l-3.077 -3.076a5.5 5.5 0 0 1 -1.217 -5.932l2.466 -6.165A4.5 4.5 0 0 1 34.431 1.5c7.365 0 12.166 5.861 12.052 13.056Z"
+            stroke-width="1"
+          ></path>
+        </g>
+      </svg>
+    </a>
+  </body>
+</html>
